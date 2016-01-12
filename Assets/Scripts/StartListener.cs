@@ -39,7 +39,7 @@ public class StartListener : BeatListener {
 		 		//On PC
 				Input.GetKeyDown(KeyCode.Space)  ||
 				//On Android
-		 		(Input.touches.Length > 0 && Input.touches[0].phase == TouchPhase.Ended) ||
+		 		(Input.touches.Length > 0 && Input.touches[0].phase == TouchPhase.Ended) || Input.GetMouseButtonDown(0) ||
 		 		//On GamePad
 		 		(Input.GetButtonDown("Home") || Input.GetButtonDown("Jump"))
 		 	)

@@ -17,7 +17,7 @@ public class PlatformFountainController : BeatListener {
 
 	protected override void Update ()
 	{
-		particleSystem.startSpeed = Mathf.Lerp(particleSystem.startSpeed, goalSpeed, transitionSpeed * Time.deltaTime);
+		GetComponent<ParticleSystem>().startSpeed = Mathf.Lerp(GetComponent<ParticleSystem>().startSpeed, goalSpeed, transitionSpeed * Time.deltaTime);
 		                                     
 
 		base.Update ();
@@ -25,8 +25,8 @@ public class PlatformFountainController : BeatListener {
 
 	protected override void HandleHalf (int b64, int b32, int b16, int b8, int b4, int b2, int b1, int bh)
 	{
-		if(b64 == 8) particleSystem.startColor = new Color(1, 1, 1, (float)(bh % 128) / 127f);
-		if(b64 == 13) particleSystem.startColor = new Color(1, 1, 1, 1f - (float)(bh % 128) / 127f);
+		if(b64 == 8) GetComponent<ParticleSystem>().startColor = new Color(1, 1, 1, (float)(bh % 128) / 127f);
+		if(b64 == 13) GetComponent<ParticleSystem>().startColor = new Color(1, 1, 1, 1f - (float)(bh % 128) / 127f);
 	}
 
 	protected override void Handle64 (int b64)

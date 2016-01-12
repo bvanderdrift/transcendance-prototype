@@ -40,7 +40,7 @@ public class FireworkController : MonoBehaviour {
 		fired = true;
 		
 		//Fire upwards
-		rigidbody.AddForce(fireSpeed * Vector3.up, ForceMode.Impulse);
+		GetComponent<Rigidbody>().AddForce(fireSpeed * Vector3.up, ForceMode.Impulse);
 		
 		//Start the tail particle emitter
 		tail.Play();
@@ -54,7 +54,7 @@ public class FireworkController : MonoBehaviour {
 		fired = true;
 		
 		//Fire upwards
-		rigidbody.AddForce(fireSpeed * Vector3.up, ForceMode.Impulse);
+		GetComponent<Rigidbody>().AddForce(fireSpeed * Vector3.up, ForceMode.Impulse);
 		
 		//Start the tail particle emitter
 		tail.Play();
@@ -68,7 +68,7 @@ public class FireworkController : MonoBehaviour {
 		fired = true;
 		
 		//Fire upwards
-		rigidbody.AddForce(fireSpeed * new Vector3(Angle.x, 1, Angle.y), ForceMode.Impulse);
+		GetComponent<Rigidbody>().AddForce(fireSpeed * new Vector3(Angle.x, 1, Angle.y), ForceMode.Impulse);
 		
 		//Start the tail particle emitter
 		tail.Play();
@@ -87,7 +87,7 @@ public class FireworkController : MonoBehaviour {
 		explosion.Play();
 
 		//Stop the rigidbody from moving and being affected by gravity
-		rigidbody.velocity = Vector3.zero;
-		rigidbody.useGravity = false;
+		GetComponent<Rigidbody>().velocity = Vector3.zero;
+		GetComponent<Rigidbody>().useGravity = false;
 	}
 }

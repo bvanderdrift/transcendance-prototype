@@ -18,7 +18,7 @@ public class StartUpScript : MonoBehaviour {
 		BeatListener.SetAudioSource(pVars.fullSource);
 
 		//Mouse setting
-		Screen.showCursor = false;
+		Cursor.visible = false;
 		//Screen.lockCursor = true;
 	}
 	

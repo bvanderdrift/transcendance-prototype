@@ -11,6 +11,6 @@ public class RingController : BeatListener {
 
 	//Function to fire the ring
 	void Fire(){
-		particleSystem.Play();
+		GetComponent<ParticleSystem>().Play();
 	}
 }

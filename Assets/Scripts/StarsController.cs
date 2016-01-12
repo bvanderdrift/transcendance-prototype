@@ -65,7 +65,7 @@ public class StarsController : BeatListener {
 		nStars.parent = transform;
 
 		if(starSystems != null && starSystems.Length >= 0){
-			nStars.particleSystem.startLifetime = starSystems[0].startLifetime;
+			nStars.GetComponent<ParticleSystem>().startLifetime = starSystems[0].startLifetime;
 		}
 
 		starSystems = GetComponentsInChildren<ParticleSystem>();

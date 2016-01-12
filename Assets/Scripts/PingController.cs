@@ -10,16 +10,16 @@ public class PingController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		intensityGoal = 0;
-		renderer.material.color = new Color(1, 1, 1, 0);
+		GetComponent<Renderer>().material.color = new Color(1, 1, 1, 0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		renderer.material.color = new Color(1, 1, 1, Mathf.Lerp(renderer.material.color.a, intensityGoal, (renderer.material.color.a < intensityGoal ? fadeInSpeed : fadeOutSpeed) * Time.deltaTime));
+		GetComponent<Renderer>().material.color = new Color(1, 1, 1, Mathf.Lerp(GetComponent<Renderer>().material.color.a, intensityGoal, (GetComponent<Renderer>().material.color.a < intensityGoal ? fadeInSpeed : fadeOutSpeed) * Time.deltaTime));
 	}
 
 	//Function te set intensity
 	public void SetIntensity(float i){
-		renderer.material.color = new Color(1, 1, 1, i);
+		GetComponent<Renderer>().material.color = new Color(1, 1, 1, i);
 	}
 }

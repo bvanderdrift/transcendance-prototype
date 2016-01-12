@@ -31,9 +31,9 @@ public class SpotLightControl : MonoBehaviour {
 			if(l.transform != transform) l.intensity = Mathf.Lerp(l.intensity, 8 * intensity, (l.intensity < intensity ? fadeSpeedIn : fadeSpeedOut) * Time.deltaTime);
 		}
 
-		light.intensity = Mathf.Lerp(light.intensity, intensity, (light.intensity < intensity ? fadeSpeedIn : fadeSpeedOut) * Time.deltaTime); 
+		GetComponent<Light>().intensity = Mathf.Lerp(GetComponent<Light>().intensity, intensity, (GetComponent<Light>().intensity < intensity ? fadeSpeedIn : fadeSpeedOut) * Time.deltaTime); 
 
-		cone.material.color = new Color(1, 1, 1, Mathf.Lerp(cone.material.color.a, transparancy, (light.intensity < intensity ? fadeSpeedIn : fadeSpeedOut) * Time.deltaTime));
+		cone.material.color = new Color(1, 1, 1, Mathf.Lerp(cone.material.color.a, transparancy, (GetComponent<Light>().intensity < intensity ? fadeSpeedIn : fadeSpeedOut) * Time.deltaTime));
 	}
 
 	//Intensity functions

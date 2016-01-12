@@ -42,7 +42,7 @@ public class PlatformLightController : MonoBehaviour {
 		float colorIntensity = Mathf.Sqrt(intensity) * (1 - darkIntensity);
 
 		//Set the materials color
-		renderer.material.color = new Color(dark.r + colorIntensity * color.r, dark.g + colorIntensity * color.g, dark.b + colorIntensity * color.b, 1);
+		GetComponent<Renderer>().material.color = new Color(dark.r + colorIntensity * color.r, dark.g + colorIntensity * color.g, dark.b + colorIntensity * color.b, 1);
 
 		//Set intensity back to 0 if blinking
 		if(blinking) intensity = Mathf.Lerp(intensity, 0, fadeSpeed * Time.deltaTime);

@@ -1,5 +1,7 @@
 # Transcendance
 
+![Banner](Assets/Banner.png)
+
 From my original post on the Oculus fora: ([source](https://forums.oculusvr.com/community/discussion/6000/transcendance-a-musical-experience))
 
 > Hey guys!
